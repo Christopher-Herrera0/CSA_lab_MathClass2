@@ -8,7 +8,12 @@ public class MathPractice2 {
     // 1. Generate a random integer between 100 and 200 inclusive.
     public static int q1() {
         // TODO: Implement
-        return 0;
+        int min = 100;
+        int max = 200;
+
+        int range = (max - min) + 1;
+        int randNum = (int) (Math.random() + range + min);
+        return randNum;
     }
 
     // 2. Use Math.min() to return the smaller of two integers.
@@ -26,7 +31,16 @@ public class MathPractice2 {
     // 4. Simulate flipping a coin (randomly return "Heads" or "Tails").
     public static String q4() {
         // TODO: Implement
-        return "";
+        int numerator = (int) (Math.random() * 100);
+        System.out.println(numerator);
+
+        int result = numerator % 2;
+        if (result==0){
+            return "Heads";
+
+        } else {
+            return "Tails";
+        }
     }
 
     // 5. Return the result of rounding 3.14159 to the nearest integer using Math.round().
